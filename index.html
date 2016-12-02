@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <title></title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <link rel="icon" href="/favicon.ico" mce_href="/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="/favicon.ico" mce_href="/favicon.ico" type="image/x-icon" />
+    <!-- css section -->
+    <link href="Public/css/cong.css" rel="stylesheet" type="text/css"/>    <!-- css section end-->
+
+    <!--<script type="text/javascript" src="http://res.xiaokakeji.com/sea.js?sites/web/js/config" ></script>-->
+    <script type="text/javascript" src="Public/js/Home/footer.js"></script>
+</head>
+<body class="has-wheel my-test">
+
+<!--header-->
+<div class="header">
+    <div class="inner clearfix">
+        <h1 class="logo-box">
+            <a href="http://local.open_web.com:8087" class="left"><img alt="典典养车" src="http://res.xiaokakeji.com/sites/web/images/3.5.0/logo.png"/></a>
+            <span style="margin-left: 30px;">开放平台</span>
+        </h1>
+
+        <!-- nav -->
+        <ul class="nav">
+            <li><a href="http://local.open_web.com:8087" class="home" >首页</a></li>
+            <li><a href="http://local.open_web.com:8087" >首页</a></li>
+            <li><a href="http://local.open_web.com:8087/join" >接入指南</a></li>
+            <li><a href="http://local.open_web.com:8087/doc" class="active">开发文档</a></li>
+            <!--<li><a href="http://local.open_web.com:8087/shopmall.html" >商城招商</a></li>-->
+            <li><a href="http://local.open_web.com:8087/help" >帮助中心</a></li>
+        </ul>
+        <!--nav end-->
+    </div>
+</div>
+<!--header end-->
+
+
+<!--左边列表菜单和右边内容框的css-->
+<style>
+    p {
+        display: block;
+        -webkit-margin-before: 1em;
+        -webkit-margin-after: 1em;
+        -webkit-margin-start: 0px;
+        -webkit-margin-end: 0px;
+    }
+    body, h1, h2, h3, h4, h5, h6, p, ul, ol, dl, dd, fieldset, textarea {
+        margin: 0;
+    }
+    body {
+        font-family: "Hiragino Sans GB","Microsoft YaHei","黑体",Helvetica,Arial,Tahoma,sans-serif;
+        font-size: 14px;
+        color: #222;
+    }
+    body {
+        -webkit-font-smoothing: antialiased;
+        line-height: 1.6;
+    }
+    dl {
+        display: block;
+        -webkit-margin-before: 1em;
+        -webkit-margin-after: 1em;
+        -webkit-margin-start: 0px;
+        -webkit-margin-end: 0px;
+    }
+
+    .page_resource .container_box {
+        margin-top: 44px;
+    }
+    .inner.wrp {
+        width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .container_box {
+        border: 1px solid #e6e6e6;
+        border-radius: 2px;
+        -moz-border-radius: 2px;
+        -webkit-border-radius: 2px;
+        background-color: #fff;
+        margin-top: 44px;
+    }
+    .container_box {
+        min-height: 630px;
+    }
+    ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+    }
+    ::-webkit-scrollbar-thumb {
+        border-radius: 3px;
+        -moz-border-radius: 3px;
+        -webkit-border-radius: 3px;
+        background-color: #c3c3c3;
+    }
+    ::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+    .container_box.cell_layout .col_side {
+        width: 20%;
+        max-width: 191px;
+    }
+
+    .container_box.cell_layout .col_side, .container_box.cell_layout .col_main {
+        display: table-cell;
+        vertical-align: top;
+        word-wrap: break-word;
+        word-break: break-all;
+    }
+    .col_side {
+        background-color: #fff;
+    }
+    .col_side {
+        border-right: 1px solid #e6e6e6;
+    }
+    .page_resource .menu_box_primary {
+        margin-bottom: 100px;
+    }
+    .menu_box_primary {
+        width: 100%;
+    }
+    .menu_primary dt {
+        cursor: pointer;
+    }
+    .menu_title_primary {
+        line-height: 40px;
+        height: 40px;
+        padding: 0 0 0 32px;
+        position: relative;
+        border-bottom: 1px solid #e6e6e6;
+    }
+    .menu_primary dt .icon_menu_switch {
+        margin-right: 5px;
+        margin-top: -2px;
+        vertical-align: middle;
+        display: inline-block;
+        width: 0;
+        height: 0;
+        border-width: 5px;
+        border-style: dashed;
+        border-color: transparent;
+        border-top-width: 0;
+        border-bottom-color: #babec4;
+        border-bottom-style: solid;
+        position: absolute;
+        right: 10px;
+        top: 20px;
+    }
+
+    .menu_link_primary.no_sub.selected {
+        background-color: #006ed5;
+        color: #fff;
+    }
+    .sub_menu_title_primary .menu_link_primary {
+        padding-left: 32px;
+    }
+    .sub_menu_title_primary .menu_link_primary{
+        padding-right: 30px;
+    }
+    .menu_link_primary {
+        display: block;
+        line-height: 40px;
+        text-decoration: none;
+        color: #222;
+        width: auto;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        word-wrap: normal;
+    }
+    .sub_menu_title_primary i {
+        display: inline-block;
+        font-weight: 400;
+        font-style: normal;
+        vertical-align: middle;
+        color: #d5d5d5;
+        margin-top: -0.2em;
+        margin-right: .5em;
+    }
+
+    .menu_primary dt.closed .icon_menu_switch {
+        border-top: 5px solid #babec4;
+        border-bottom-width: 0;
+    }
+
+    i, cite, em, var, address, dfn{
+        font-style: italic;
+    }
+
+    .container_box.cell_layout .col_main {
+        width: 2000px;
+        height: 630px;
+    }
+    .page_resource .article_box .inner {
+        padding: 50px 45px;
+    }
+    h5 {
+        display: block;
+        font-size: 0.83em;
+        -webkit-margin-before: 1.67em;
+        -webkit-margin-after: 1.67em;
+        -webkit-margin-start: 0px;
+        -webkit-margin-end: 0px;
+        font-weight: bold;
+    }
+    .article_box h5 {
+        padding-bottom: 14px;
+        font-weight: 700;
+        font-size: 16px;
+    }
+    .article_box h4, .article_box h5 {
+        font-size: 14px;
+    }
+
+    .article_box dl, .article_box li, .article_box p {
+        padding-bottom: 14px;
+        font-size: 14px;
+    }
+
+    .page_resource .res_iframe {
+        border: 0;
+        width: 100%;
+        height: 770px;
+    }
+
+
+</style>
+
+<div class="inner wrp container_box cell_layout page_resource">
+    <div class="col_side">
+        <div class="menu_box_primary">
+            <dl id="resMenu" class="menu_primary">
+
+                <!--<volist name="datas" id="item">
+                    <dt data-leaf="1" class="menu_title_primary" title="移动应用"><i class="icon_menu_switch"></i>{$item.title}</dt>
+                    <if condition="item.sub">
+                        <dd class="menu_desc_primary" style="">
+                            <dl class="sub_menu_primary">
+                                <volist name="item.sub" id="item2">
+                                    <dt data-leaf="1" class="sub_menu_title_primary">
+                                        <a href="javascript:void(0);" title="{$item2.title}" data-id="{$item2.id}" class="menu_link_primary no_sub"><i>●</i>{$item2.title}</a>
+                                    </dt>
+                                </volist>
+                            </dl>
+                        </dd>
+                    </if>
+                </volist>-->
+
+
+                <dt data-leaf="1" class="menu_title_primary" title="移动应用"><i class="icon_menu_switch"></i>移动应用</dt>
+                <dd class="menu_desc_primary" style="">
+                    <dl class="sub_menu_primary">
+                        <dt data-leaf="1" class="sub_menu_title_primary">
+                            <a href="javascript:void(0);" data-leaf="1" data-id="1417674108" data-father="1416798877" title="资源中心首页" class="menu_link_primary no_sub"><i>●</i>资源中心首页</a>
+                        </dt>
+                        <dt data-leaf="1" class="sub_menu_title_primary closed"><a data-leaf="0" href="javascript:" data-father="1416798877" class="menu_link_primary no_sub" title="接入指南"><i>●</i>接入指南</a></dt>
+                        <!--<dd class="sub_menu_desc_primary" style="display: none;">
+                            <ul>
+                                <li><a href="javascript:void(0);" data-leaf="1" data-id="1417751808" data-father="1417694006" title="Android接入指南" class="menu_link_primary no_sub">Android接入指南</a></li>
+                                <li><a href="javascript:void(0);" data-leaf="1" data-id="open1419315810" data-father="1417694006" title="WP8接入指南" class="menu_link_primary no_sub">WP8接入指南</a></li>
+                                <li><a href="javascript:void(0);" data-leaf="1" data-id="1417694084" data-father="1417694006" title="iOS接入指南" class="menu_link_primary no_sub">iOS接入指南</a></li>
+                            </ul>
+                        </dd>-->
+                        <dt data-leaf="1" class="sub_menu_title_primary closed"><a data-leaf="0" href="javascript:" data-father="1416798877" class="menu_link_primary no_sub" title="分享与收藏功能"><i>●</i>分享与收藏功能</a></dt>
+                        <!--<dd class="sub_menu_desc_primary" style="display: none;">
+                            <ul>
+                                <li><a href="javascript:void(0);" data-leaf="1" data-id="open1419317332" data-father="open1419315781" title="iOS应用" class="menu_link_primary no_sub">iOS应用</a></li>
+                                <li><a href="javascript:void(0);" data-leaf="1" data-id="open1419317340" data-father="open1419315781" title="Android应用" class="menu_link_primary no_sub">Android应用</a></li>
+                                <li><a href="javascript:void(0);" data-leaf="1" data-id="open1419317344" data-father="open1419315781" title="WP8开发手册" class="menu_link_primary no_sub">WP8开发手册</a></li>
+                            </ul>
+                        </dd>-->
+                        <dt data-leaf="1" class="sub_menu_title_primary closed"><a data-leaf="0" href="javascript:" data-father="1416798877" class="menu_link_primary" title="微信支付功能"><i>●</i>微信支付功能</a></dt>
+                        <dd class="sub_menu_desc_primary" style="display:none;">
+                            <ul>
+                                <li><a href="javascript:void(0);" data-leaf="1" data-id="open1419317780" data-father="open1419315831" title="微信APP支付接入商户服务中心" class="menu_link_primary no_sub">微信APP支付接入商户服务中心</a></li>
+                                <li><a href="javascript:void(0);" data-leaf="1" data-id="open1419317782" data-father="open1419315831" title="iOS开发手册" class="menu_link_primary no_sub">iOS开发手册</a></li>
+                                <li><a href="javascript:void(0);" data-leaf="1" data-id="open1419317784" data-father="open1419315831" title="Android开发手册" class="menu_link_primary no_sub">Android开发手册</a></li>
+                                <li><a href="javascript:void(0);" data-leaf="1" data-id="open1419317800" data-father="open1419315831" title="WP开发手册" class="menu_link_primary no_sub">WP开发手册</a></li>
+                            </ul>
+                        </dd>
+                        <dt data-leaf="1" class="sub_menu_title_primary closed"><a data-leaf="0" href="javascript:" data-father="1416798877" class="menu_link_primary" title="微信登录功能"><i>●</i>微信登录功能</a></dt>
+                        <dd class="sub_menu_desc_primary" style="display:none;">
+                            <ul>
+                                <li><a href="javascript:void(0);" data-leaf="1" data-id="open1419317851" data-father="open1419315847" title="移动应用微信登录开发指南" class="menu_link_primary no_sub">移动应用微信登录开发指南</a></li>
+                                <li><a href="javascript:void(0);" data-leaf="1" data-id="open1419317853" data-father="open1419315847" title="授权后接口调用指引（UnionID）" class="menu_link_primary no_sub">授权后接口调用指引（UnionID）</a></li>
+                            </ul>
+                        </dd>
+                        <dt data-leaf="1" class="sub_menu_title_primary closed"><a data-leaf="0" href="javascript:" data-father="1416798877" class="menu_link_primary" title="微信智能接口"><i>●</i>微信智能接口</a></dt>
+                        <dd class="sub_menu_desc_primary" style="display:none;">
+                            <ul>
+                                <li><a href="javascript:void(0);" data-leaf="1" data-id="open1419317903" data-father="open1419315995" title="图像识别接口" class="menu_link_primary no_sub">图像识别接口</a></li>
+                                <li><a href="javascript:void(0);" data-leaf="1" data-id="open1419317904" data-father="open1419315995" title="语音识别接口" class="menu_link_primary no_sub">语音识别接口</a></li>
+                                <li><a href="javascript:void(0);" data-leaf="1" data-id="open1419317907" data-father="open1419315995" title="语音合成接口" class="menu_link_primary no_sub">语音合成接口</a></li>
+                                <li><a href="javascript:void(0);" data-leaf="1" data-id="open1419317910" data-father="open1419315995" title="语义理解接口" class="menu_link_primary no_sub">语义理解接口</a></li>
+                            </ul>
+                        </dd>
+                        <dt data-leaf="1" class="sub_menu_title_primary closed"><a data-leaf="0" href="javascript:" data-father="1416798877" class="menu_link_primary" title="常见问题"><i>●</i>常见问题</a></dt>
+                        <dd class="sub_menu_desc_primary" style="display:none;">
+                            <ul>
+
+
+                                <li><a href="javascript:void(0);" data-leaf="1" data-id="open1419318037" data-father="open1419316029" title="开发者须知" class="menu_link_primary no_sub">开发者须知</a></li>
+
+
+
+                                <li><a href="javascript:void(0);" data-leaf="1" data-id="open1419318046" data-father="open1419316029" title="iOS常见问题" class="menu_link_primary no_sub">iOS常见问题</a></li>
+
+
+
+                                <li><a href="javascript:void(0);" data-leaf="1" data-id="open1419318060" data-father="open1419316029" title="Android常见问题" class="menu_link_primary no_sub">Android常见问题</a></li>
+
+
+
+                                <li><a href="javascript:void(0);" data-leaf="1" data-id="open1467362469_vA3x5" data-father="open1419316029" title="开发者反馈" class="menu_link_primary no_sub">开发者反馈</a></li>
+
+
+                            </ul>
+                        </dd>
+
+
+                    </dl>
+                </dd>
+
+
+                <dt data-leaf="1" class="menu_title_primary closed" title="网站应用"><i class="icon_menu_switch"></i>网站应用</dt>
+                <dd class="menu_desc_primary" style="display:none;">
+                    <dl class="sub_menu_primary">
+
+
+                        <dt data-leaf="1" class="sub_menu_title_primary closed"><a data-leaf="0" href="javascript:" data-father="1417676010" class="menu_link_primary" title="微信登录功能"><i>●</i>微信登录功能</a></dt>
+                        <dd class="sub_menu_desc_primary" style="display:none;">
+                            <ul>
+
+
+                                <li><a href="javascript:void(0);" data-leaf="1" data-id="open1419316505" data-father="open1419316343" title="网站应用微信登录开发指南" class="menu_link_primary no_sub">网站应用微信登录开发指南</a></li>
+
+
+
+                                <li><a href="javascript:void(0);" data-leaf="1" data-id="open1419316518" data-father="open1419316343" title="授权后接口调用（UnionID）" class="menu_link_primary no_sub">授权后接口调用（UnionID）</a></li>
+
+
+                            </ul>
+                        </dd>
+
+
+
+                        <dt data-leaf="1" class="sub_menu_title_primary closed"><a data-leaf="0" href="javascript:" data-father="1417676010" class="menu_link_primary" title="微信智能接口"><i>●</i>微信智能接口</a></dt>
+                        <dd class="sub_menu_desc_primary" style="display:none;">
+                            <ul>
+
+
+                                <li><a href="javascript:void(0);" data-leaf="1" data-id="open1419318113" data-father="open1419318092" title="语义理解接口" class="menu_link_primary no_sub">语义理解接口</a></li>
+
+
+                            </ul>
+                        </dd>
+
+
+                    </dl>
+                </dd>
+
+
+                <dt data-leaf="1" class="menu_title_primary closed" title="公众帐号"><i class="icon_menu_switch"></i>公众帐号</dt>
+                <dd class="menu_desc_primary" style="display:none;">
+                    <dl class="sub_menu_primary">
+
+
+                        <dt data-leaf="1" class="sub_menu_title_primary closed"><a data-leaf="0" href="javascript:" data-father="open1419316059" class="menu_link_primary" title="新手接入"><i>●</i>新手接入</a></dt>
+                        <dd class="sub_menu_desc_primary" style="display:none;">
+                            <ul>
+                                <li><a href="javascript:void(0);" data-leaf="1" data-id="open1419318183" data-father="open1419318137" title="接入指南" class="menu_link_primary no_sub">接入指南</a></li>
+                                <li><a href="javascript:void(0);" data-leaf="1" data-id="open1419318185" data-father="open1419318137" title="典型案例介绍" class="menu_link_primary no_sub">典型案例介绍</a></li>
+                                <li><a href="javascript:void(0);" data-leaf="1" data-id="open1419318186" data-father="open1419318137" title="开发者规范" class="menu_link_primary no_sub">开发者规范</a></li>
+                            </ul>
+                        </dd>
+
+                        <dt data-leaf="1" class="sub_menu_title_primary closed"><a data-leaf="0" href="javascript:" data-father="open1419316059" class="menu_link_primary" title="交流互助"><i>●</i>交流互助</a></dt>
+                        <dd class="sub_menu_desc_primary" style="display:none;">
+                            <ul>
+
+
+                                <li><a href="javascript:void(0);" data-leaf="1" data-id="open1419318209" data-father="open1419318153" title="开发者问答系统" class="menu_link_primary no_sub">开发者问答系统</a></li>
+
+
+
+                                <li><a href="javascript:void(0);" data-leaf="1" data-id="open1419318211" data-father="open1419318153" title="在线接口调试工具" class="menu_link_primary no_sub">在线接口调试工具</a></li>
+
+
+
+                                <li><a href="javascript:void(0);" data-leaf="1" data-id="open1419318213" data-father="open1419318153" title="接口测试账号申请" class="menu_link_primary no_sub">接口测试账号申请</a></li>
+
+
+                            </ul>
+                        </dd>
+
+
+
+                        <dt data-leaf="1" class="sub_menu_title_primary closed"><a data-leaf="0" href="javascript:" data-father="open1419316059" class="menu_link_primary" title="开发者文档"><i>●</i>开发者文档</a></dt>
+                        <dd class="sub_menu_desc_primary" style="display:none;">
+                            <ul>
+
+
+                                <li><a href="javascript:void(0);" data-leaf="1" data-id="open1419318259" data-father="open1419318162" title="开发者文档" class="menu_link_primary no_sub">开发者文档</a></li>
+
+
+                            </ul>
+                        </dd>
+
+
+                    </dl>
+                </dd>
+
+
+
+                <dt data-leaf="1" class="menu_title_primary closed" title="公众号第三方平台"><i class="icon_menu_switch"></i>公众号第三方平台</dt>
+                <dd class="menu_desc_primary" style="display:none;">
+                    <dl class="sub_menu_primary">
+
+
+                        <dt data-leaf="1" class="sub_menu_title_primary">
+                            <a href="javascript:void(0);" data-leaf="1" data-id="open1419318292" data-father="open1419316268" title="概述" class="menu_link_primary no_sub"><i>●</i>概述</a>
+                        </dt>
+
+
+
+                        <dt data-leaf="1" class="sub_menu_title_primary">
+                            <a href="javascript:void(0);" data-leaf="1" data-id="open1453779503" data-father="open1419316268" title="授权流程技术说明" class="menu_link_primary no_sub"><i>●</i>授权流程技术说明</a>
+                        </dt>
+
+
+
+                        <dt data-leaf="1" class="sub_menu_title_primary closed"><a data-leaf="0" href="javascript:" data-father="open1419316268" class="menu_link_primary" title="开发前必读"><i>●</i>开发前必读</a></dt>
+                        <dd class="sub_menu_desc_primary" style="display:none;">
+                            <ul>
+
+
+                                <li><a href="javascript:void(0);" data-leaf="1" data-id="open1419318459" data-father="open1419318395" title="权限说明" class="menu_link_primary no_sub">权限说明</a></li>
+
+
+
+                                <li><a href="javascript:void(0);" data-leaf="1" data-id="open1419318462" data-father="open1419318395" title="申请资料说明" class="menu_link_primary no_sub">申请资料说明</a></li>
+
+
+
+                                <li><a href="javascript:void(0);" data-leaf="1" data-id="open1421219500" data-father="open1419318395" title="产品设计指引" class="menu_link_primary no_sub">产品设计指引</a></li>
+
+
+
+                                <li><a href="javascript:void(0);" data-leaf="1" data-id="open1448360321" data-father="open1419318395" title="第三方安全说明" class="menu_link_primary no_sub">第三方安全说明</a></li>
+
+
+                            </ul>
+                        </dd>
+
+
+
+                        <dt data-leaf="1" class="sub_menu_title_primary closed"><a data-leaf="0" href="javascript:" data-father="open1419316268" class="menu_link_primary" title="代公众号实现业务"><i>●</i>代公众号实现业务</a></dt>
+                        <dd class="sub_menu_desc_primary" style="display:none;">
+                            <ul>
+
+
+                                <li><a href="javascript:void(0);" data-leaf="1" data-id="open1419318587" data-father="open1419318420" title="调用接口" class="menu_link_primary no_sub">调用接口</a></li>
+
+
+
+                                <li><a href="javascript:void(0);" data-leaf="1" data-id="open1425027340" data-father="open1419318420" title="处理消息和事件" class="menu_link_primary no_sub">处理消息和事件</a></li>
+
+
+
+                                <li><a href="javascript:void(0);" data-leaf="1" data-id="open1419318590" data-father="open1419318420" title="发起网页授权" class="menu_link_primary no_sub">发起网页授权</a></li>
+
+
+
+                                <li><a href="javascript:void(0);" data-leaf="1" data-id="open1421823488" data-father="open1419318420" title="使用JS SDK" class="menu_link_primary no_sub">使用JS SDK</a></li>
+
+
+
+                                <li><a href="javascript:void(0);" data-leaf="1" data-id="open1444460487" data-father="open1419318420" title="卡券强授权" class="menu_link_primary no_sub">卡券强授权</a></li>
+
+
+                            </ul>
+                        </dd>
+
+
+
+                        <dt data-leaf="1" class="sub_menu_title_primary closed"><a data-leaf="0" href="javascript:" data-father="open1419316268" class="menu_link_primary" title="消息加解密说明"><i>●</i>消息加解密说明</a></dt>
+                        <dd class="sub_menu_desc_primary" style="display:none;">
+                            <ul>
+
+
+                                <li><a href="javascript:void(0);" data-leaf="1" data-id="open1419318479" data-father="open1419318406" title="消息加解密接入" class="menu_link_primary no_sub">消息加解密接入</a></li>
+
+
+
+                                <li><a href="javascript:void(0);" data-leaf="1" data-id="open1419318482" data-father="open1419318406" title="加解密技术方案" class="menu_link_primary no_sub">加解密技术方案</a></li>
+
+
+                            </ul>
+                        </dd>
+
+
+
+                        <dt data-leaf="1" class="sub_menu_title_primary closed"><a data-leaf="0" href="javascript:" data-father="open1419316268" class="menu_link_primary" title="全网发布申请说明"><i>●</i>全网发布申请说明</a></dt>
+                        <dd class="sub_menu_desc_primary" style="display:none;">
+                            <ul>
+
+
+                                <li><a href="javascript:void(0);" data-leaf="1" data-id="open1419318611" data-father="open1419318445" title="全网发布接入检测" class="menu_link_primary no_sub">全网发布接入检测</a></li>
+
+
+                            </ul>
+                        </dd>
+
+
+                    </dl>
+                </dd>
+
+
+
+                <dt data-leaf="1" class="menu_title_primary closed" title="返回码说明"><i class="icon_menu_switch"></i>返回码说明</dt>
+                <dd class="menu_desc_primary" style="display:none;">
+                    <dl class="sub_menu_primary">
+
+
+                        <dt data-leaf="1" class="sub_menu_title_primary">
+                            <a href="javascript:void(0);" data-leaf="1" data-id="open1419318634" data-father="open1419316281" title="返回码说明" class="menu_link_primary no_sub"><i>●</i>返回码说明</a>
+                        </dt>
+
+
+                    </dl>
+                </dd>
+
+
+
+                <dt data-leaf="1" class="menu_title_primary closed" title="资源下载"><i class="icon_menu_switch"></i>资源下载</dt>
+                <dd class="menu_desc_primary" style="display:none;">
+                    <dl class="sub_menu_primary">
+
+
+                        <dt data-leaf="1" class="sub_menu_title_primary">
+                            <a href="javascript:void(0);" data-leaf="1" data-id="open1419319164" data-father="open1419318946" title="iOS资源下载" class="menu_link_primary no_sub"><i>●</i>iOS资源下载</a>
+                        </dt>
+
+
+
+                        <dt data-leaf="1" class="sub_menu_title_primary">
+                            <a href="javascript:void(0);" data-leaf="1" data-id="open1419319167" data-father="open1419318946" title="Android资源下载" class="menu_link_primary no_sub"><i>●</i>Android资源下载</a>
+                        </dt>
+
+
+
+                        <dt data-leaf="1" class="sub_menu_title_primary">
+                            <a href="javascript:void(0);" data-leaf="1" data-id="open1419319170" data-father="open1419318946" title="WP8资源下载" class="menu_link_primary no_sub"><i>●</i>WP8资源下载</a>
+                        </dt>
+
+
+
+                        <dt data-leaf="1" class="sub_menu_title_primary">
+                            <a href="javascript:void(0);" data-leaf="1" data-id="open1419319171" data-father="open1419318946" title="设计资源下载" class="menu_link_primary no_sub"><i>●</i>设计资源下载</a>
+                        </dt>
+
+
+                    </dl>
+                </dd>
+
+            </dl>
+        </div>
+    </div>
+    <div class="col_main">
+        <div class="article_box" id="index" style="display:none;">
+            <div class="inner">
+                <div class="news_content">
+                    <h5>
+                        资源中心是微信开放平台开发者所需所有相关资源的汇集地，包括：                        </h5>
+                    <p style="padding-left:30px;">
+                        1.移动应用开发<br>
+                        2.网站应用开发<br>
+                        3.公众帐号开发<br>
+                        4.公众号服务开发<br>
+                    </p>
+
+                    <h5>
+                        此外，还包括了开发过程中的返回码说明和资源下载，具体资源包括：                        </h5>
+                    <p style="padding-left:30px;">
+                        1.开发工具包<br>
+                        2.范例代码<br>
+                        3.Android开发所必需的签名生成工具<br>
+                        4.视觉设计资源（请开发者使用标准设计资源，保证一致的用户体验）<br>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <iframe frameborder="0" class="res_iframe" style="height: 770px;" id="iframe" src="content.html">
+        </iframe>
+    </div>
+</div>
+
+<script type="text/javascript" src="jquery.min.js" ></script>
+<script>
+    $(function(){
+        $('.container_box .menu_box_primary #resMenu dt').click(function(){
+            if( $(this).hasClass("closed") ){
+                $(this).removeClass("closed");
+                $(this).next(".menu_desc_primary").show();
+            }else{
+                $(this).addClass("closed");
+                $(this).next(".menu_desc_primary").hide();
+            }
+        });
+        $('.container_box .menu_box_primary .sub_menu_title_primary a').click(function(){
+            $('.container_box .menu_box_primary .sub_menu_title_primary a').removeClass('selected');
+            $(this).addClass("selected");
+//            $('#iframe').attr("src","/doc/iframeContent/id/"+$(this).attr('data-id'));
+            $('#iframe').attr("src","content.html");
+        });
+        $('.container_box .menu_box_primary .sub_menu_title_primary a').first().trigger("click");
+    });
+</script>
+
+
+<!-- footer -->
+<div class="footer">
+    <div class="footer-top">
+        <div class="inner clearfix">
+            <div class="QR-code">
+                <img src="http://res.xiaokakeji.com/sites/web/images/3.3/QR-code.png">
+            </div>
+            <div class="wechat">
+                <dl>
+                    <dt><i class="footer-circle-icon"></i>典典养车官方微信公众号</dt>
+                    <dd>想了解典典养车最新功能</dd>
+                    <dd>促销活动和红包政策</dd>
+                    <dd>请关注典典养车官方微信账号~</dd>
+                </dl>
+            </div>
+            <div class="contact">
+                <dl>
+                    <dt><i class="footer-circle-icon"></i>联系我们</dt>
+                    <dd>工作时间：08:00 - 20:00</dd>
+                    <dd>微信号：典典养车</dd>
+                    <dd class="contact-phone"><i class="footer-phone-icon"></i>联系客服：请在官方APP上联系客服</dd>
+                </dl>
+            </div>
+            <div class="contact">
+                <dl>
+                    <dt><i class="footer-circle-icon"></i>典典连锁</dt>
+                    <dd>加盟方式：请在页面上方“连锁加盟”处提交资料</dd>
+                    <dd>加盟邮箱：zs@xiaokakeji.com</dd>
+                </dl>
+            </div>
+            <div class="weibo">
+                <a href="http://weibo.com/yangchediandian" target="_blank">
+                    <i class="weibo-icon"></i>关注官方微博
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom" style="height: auto;">
+        <div class="inner">
+            <p>
+            </p>
+            <p>
+                <a href="http://local.open_web.com:8087/about.html" target="_blank">关于典典养车</a>
+                <span>|</span>
+                <a href="http://local.open_web.com:8087/contact.html" target="_blank">联系我们</a>
+                <span>|</span>
+                <a href="http://local.open_web.com:8087/jobs.html" target="_blank">诚聘英才</a>
+                <!-- <span>|</span>
+                <a href="#" target="_blank" title="" ref="nofollow">网站地图</a> -->
+                <span>|</span>
+                <span>ICP认证：浙ICP备14007693号-3</span>
+                <span>|</span>
+                <a href="http://local.open_web.com:8087/faq.html" target="_blank">常见问题</a>
+            </p>
+            <p><span>本公司用字经北京北大方正电子有限公司授权许可</span></p>
+        </div>
+    </div>
+</div>
+<!-- footer end-->
+
+
+<!--<script>seajs.use("sites/web/js/common/common");footer();</script>-->
+</body>
+</html>
